@@ -7,7 +7,7 @@ OUTPUT_FILE = "data/final_output.csv"
 
 def enrich_company(company_name, description):
     print(f"\nProcessing: {company_name}")
-    website = get_company_website(company_name)
+    website = get_company_website(company_name, description)
     linkedin = get_linkedin_url(company_name)
     career_page = find_career_page(website)
     top_jobs = get_top_jobs(career_page)

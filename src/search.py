@@ -1,8 +1,8 @@
 from ddgs import DDGS
 
-def get_company_website(company_name):
-    """Search for the company's official website, ignoring Wikipedia, Crunchbase, etc."""
-    query = f"{company_name} official site"
+def get_company_website(company_name, description):
+    """Search for the company's official website with description, ignoring Wikipedia, Crunchbase, etc."""
+    query = f"{company_name} official site {description}"
     blocked_domains = ["wikipedia.org", "linkedin.com", "crunchbase.com", "glassdoor.com", "indeed.com"]
 
     with DDGS() as ddgs:
